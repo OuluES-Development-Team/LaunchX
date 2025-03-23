@@ -1,14 +1,44 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# LaunchX - Setup and Run Instructions
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Install [Node.js](https://nodejs.org/)
+    Node.js (v16+)
+    npm or yarn
 
-## Expanding the ESLint configuration
+## Steps to Run the Project
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# LaunchX
-OuluES LaunchX summer accelerator website
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/OuluES-Development-Team/LaunchX.git
+   cd LaunchX
+   ```
+2. **Install the dependencies**:
+
+   ```bash
+   npm install
+   ```
+3. Configure Tailwind CSS <br>
+    Ensure your vite.config.js file has the following configuration:
+
+    ```Javascript
+    import { defineConfig } from 'vite'
+    import react from '@vitejs/plugin-react'
+    import tailwindcss from '@tailwindcss/vite'
+
+    // https://vite.dev/config/
+    export default defineConfig({
+    plugins: [react(), tailwindcss()]
+    })
+    ```
+5. Ensure your index.css has the proper Tailwind directives:
+
+    @import 'tailwindcss'; <br>
+
+6. Start the development server:
+
+   ```bash
+   npm run dev
+   ``` 
