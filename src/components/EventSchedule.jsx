@@ -15,7 +15,7 @@ function EventSchedule() {
           <ScheduleCard 
             key={index} 
             title={item.title} 
-            description={item.dates.map(dateObj => `${dateObj.date} (${dateObj.time})`).join(', ')}
+            description={item.dates.map(dateObj => `${dateObj.date} (Start: ${dateObj.startTime} End: ${dateObj.endTime})`).join(', ')}
           />
         ))}
       </div>
