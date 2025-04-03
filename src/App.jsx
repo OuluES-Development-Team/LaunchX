@@ -7,6 +7,9 @@ import EventSchedule from './components/EventSchedule';
 import Sponsors from './components/Sponsors';
 import './index.css';
 import Footer from './components/Footer';
+import Ticket from './components/Ticket';
+import Team from './components/Team';
+import Mentor from './components/Mentor';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
         <EventDescription />
         <EventSchedule />
         <Sponsors />
+        <Ticket />
+        <Team />
+        <Mentor />
       </div>
       <Footer />
     </div>

@@ -4,8 +4,8 @@
         "title": "Establishing the Business Model and Validating Ideas",
         "focus": "Business Model Canvas, Market Validation, Branding",
         "dates": [
-          {"date": "2025-06-02", "time": "16:30-18:30"},
-          {"date": "2025-06-03", "time": "16:30-18:30"}
+          {"date": "2025-06-02", "startTime": "16:30", "endTime": "18:30"},
+          {"date": "2025-06-03", "startTime": "16:30", "endTime": "18:30"}
         ],
         "topics": [
           "Introduction to defining your business model and value proposition",
@@ -24,8 +24,8 @@
         "title": "Prototyping & Business Development",
         "focus": "Turning ideas into prototypes and refining business models",
         "dates": [
-          {"date": "2025-06-05", "time": "16:30-18:30"},
-          {"date": "2025-06-06", "time": "16:30-18:30"}
+          {"date": "2025-06-05", "startTime": "16:30", "endTime": "18:30"},
+          {"date": "2025-06-06", "startTime": "16:30", "endTime": "18:30"}
         ],
         "topics": [
           "Building MVPs using Figma and Bubble",
@@ -43,8 +43,8 @@
         "title": "Scaling & Market Strategy",
         "focus": "Growing the business and acquiring customers",
         "dates": [
-          {"date": "2025-06-09", "time": "16:30-18:30"},
-          {"date": "2025-06-10", "time": "16:30-18:30"}
+          {"date": "2025-06-09", "startTime": "16:30", "endTime": "18:30"},
+          {"date": "2025-06-10", "startTime": "16:30", "endTime": "18:30"}
         ],
         "topics": [
           "Growth hacking strategies",
@@ -62,7 +62,7 @@
       {
         "title": "Pitch Preparation & Refinement",
         "focus": "Perfecting the pitch and preparing for the final presentation",
-        "dates": [{"date": "2025-06-12", "time": "16:30-18:30"}],
+        "dates": [{"date": "2025-06-12", "startTime": "16:30", "endTime": "18:30"}],
         "topics": [
           "Crafting a compelling 5-minute pitch",
           "Pitch practice with mentor feedback",
