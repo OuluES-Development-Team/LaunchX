@@ -1,15 +1,23 @@
 import React from 'react';
+import './EventDescription.scss';
 
 function EventDescription() {
   return (
-    <div className="flex flex-col md:flex-row py-12">
-      <div className="w-full md:w-1/2 pr-0 md:pr-8 mb-8 md:mb-0">
-        <p className="text-lg">
-          Example text or description of the event
+    <div className="event-section">
+      <div className="event-text">
+        <h1 className="event-title" data-text="Startup Oulu">
+          Startup Oulu
+        </h1>
+        <p className="event-paragraph" data-text="Example text">
+         Example text
         </p>
+        <p className="event-subtext" data-text="Description for the event goes here. This is a placeholder text to give an idea of what the event is about. It can include details about the schedule, activities, and any other relevant information.">
+          Description for the event goes here. This is a placeholder text to give an idea of what the event is about. It can include details about the schedule, activities, and any other relevant information.
+        </p>
+
       </div>
-      <div className="w-full md:w-1/2 bg-gray-200 rounded-lg flex items-center justify-center h-64">
-        <span className="text-6xl text-gray-300">3</span>
+      <div className="event-box">
+        <span className="event-number">:D</span>
       </div>
     </div>
   );

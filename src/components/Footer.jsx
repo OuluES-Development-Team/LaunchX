@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-black-800 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
@@ -52,7 +52,7 @@ function Footer() {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-white-400">
           <p>© {new Date().getFullYear()} LaunchX. All rights reserved.</p>
         </div>
       </div>

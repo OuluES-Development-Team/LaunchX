@@ -137,22 +137,22 @@
     ],
     "sponsorships": [
         {
-            "name": "Gold Sponsorship",
+            "name": "Gold Partners",
             "description": "The Gold Sponsorship package includes premium benefits for maximum visibility."
         },
         {
-            "name": "Silver Sponsorship",
+            "name": "Networking Partners",
             "description": "The Silver Sponsorship package offers great benefits for visibility and engagement."
         },
         {
-            "name": "Bronze Sponsorship",
+            "name": "Media Partner",
             "description": "The Bronze Sponsorship package provides essential visibility for your brand."
         }
     ],
     "mentors": [
         {
             "name": "Dr. Jane Smith",
-            "description": "An experienced entrepreneur and startup advisor specializing in business strategy and growth.",
+            "description": "CEO of company A",
             "expertise": [
                 "Business Strategy",
                 "Growth Hacking",
@@ -161,7 +161,7 @@
         },
         {
             "name": "John Doe",
-            "description": "A seasoned software engineer with expertise in building scalable web applications.",
+            "description": "Ambassador of Finland",
             "expertise": [
                 "Software Development",
                 "Cloud Computing",
@@ -170,7 +170,7 @@
         },
         {
             "name": "Emily Johnson",
-            "description": "A marketing expert with a focus on digital marketing and customer acquisition.",
+            "description": "GENERAL PARTNER",
             "expertise": [
                 "Digital Marketing",
                 "Customer Acquisition",

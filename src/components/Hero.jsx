@@ -1,10 +1,11 @@
 import React from 'react';
+import "./Hero.scss";
 
 function Hero() {
   return (
-    <div className="bg-white py-16 text-center">
-      <h1 className="text-5xl font-bold text-gray-900 mb-2">LaunchX</h1>
-      <p className="text-xl text-gray-600">EsOulu</p>
+    <div className="bg-black py-16 text-center">
+      <h1 className="head" data-text="LaunchX">LaunchX</h1>
+      <p className="sub1" data-text="OuluES">OuluES</p>
     </div>
   );
 }

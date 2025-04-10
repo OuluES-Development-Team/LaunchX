@@ -1,0 +1,33 @@
+@font-face {
+     font-family: 'Geist';
+     src: url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Red+Hat+Display&display=swap') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+   }
+   
+   
+   // Font variables
+   $font-family-geist: 'Geist', sans-serif;
+   $font-family-main: 'Red Hat Display', sans-serif;
+   $font-family-mono: 'Geist Mono', monospace;
+   
+   // Colors
+   $primary-color: black;
+   $secondary-color: #ffffff;
+   $hover-color: #ddd;
+   $text-light: #f5f5f5;
+   $text-blue:#7fdeff;
+   $button-hover-bg: #ff007f;
+   $button-text: #ffffff;
+   $card-bg: #121113;
+   $comic-pink: #ff69b4;
+   $shadow1:#6f6fff;
+   $shadow2:#ff00c8;
+   $text-shadow1: #815ac0;   
+   // Dimensions
+   $nav-height: 60px;
+   $border-radius: 10px;
+   
+   // Misc
+   $transition-speed: 0.3s;
+   

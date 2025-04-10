@@ -13,16 +13,16 @@ import Mentor from './components/Mentor';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
       <Hero />
       <div className="container mx-auto px-4 py-8">
         <EventDescription />
         <EventSchedule />
-        <Sponsors />
+        <Mentor />
         <Ticket />
         <Team />
-        <Mentor />
+        <Sponsors />
       </div>
       <Footer />
     </div>

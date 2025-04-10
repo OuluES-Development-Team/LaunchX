@@ -1,22 +1,23 @@
 import React from 'react';
+import './Navbar.scss';
+import logo from '../assets/LaunchX-logo.png';
 
 function Navbar() {
   return (
-    <nav className="bg-white py-4 px-6 shadow">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          {/* Logo */}
-          <span className="text-2xl font-bold">⊙</span>
-        </div>
-        
-        <div className="flex items-center space-x-4">
-          <a href="#info" className="text-gray-600 hover:text-gray-900">Info</a>
-          <a href="#program" className="text-gray-600 hover:text-gray-900">Program</a>
-          <a href="#partners" className="text-gray-600 hover:text-gray-900">Partners</a>
-          <a href="#link" className="text-gray-600 hover:text-gray-900">Link</a>
-        </div>
-      </div>
-    </nav>
+    <nav className="navbar">
+  <div className="navbar-container">
+    <div className="logo">
+      <img src={logo} alt="LaunchX Logo" className="logo-image" />
+    </div>
+
+    <div className="nav-links">
+    <a href="#info" data-text="Info">Info</a>
+    <a href="#program" data-text="Program">Program</a>
+    <a href="#partners" data-text="Partners">Partners</a>
+    <a href="#link" data-text="Link">Link</a>
+    </div>
+  </div>
+</nav>
   );
 }
 

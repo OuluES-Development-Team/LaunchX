@@ -1,0 +1,101 @@
+// This file contains the styles for the EventSchedule component.
+@import "./styles/variables.scss";
+@import "./styles/mixins.scss";
+
+.event-schedule {
+  padding: 3rem 0;
+  background-color: black;
+  color: $text-light;
+  font-family: $font-family-geist;
+  text-align: center;
+
+  h2 {
+    @include font-settings($text-light, 3rem, bold);
+    margin-bottom: 0.25rem;
+    position: relative;
+    color: transparent;
+      position: relative;
+
+      &::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        color: transparent;
+        text-shadow:
+          -1px -1px 0 $text-shadow1,
+           1px -1px 0 $text-shadow1,
+          -3.5px 1px 0 $text-shadow1,
+           1px 1px 0 $text-shadow1;
+      }
+
+      &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        color: $text-light;
+      }
+    }
+  }
+
+  .event-subheading {
+    @include font-settings($text-blue, 1.5rem);
+    margin-bottom: 1.5rem;
+    @include outline-text($text-blue, $text-shadow1, 1.5rem);
+  }
+
+  .dropdown-button {
+    @include hover-button;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+
+    .front {
+      padding: 0.5rem 1.5rem;
+      background: $button-hover-bg;
+      font-family: $font-family-geist;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: $border-radius;
+      color: $button-text;
+    }
+
+    .edge,
+    .shadow {
+      display: none; // Optional to hide extra button layers
+    }
+  }
+
+  .schedule-list {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+
+    &.expanded {
+      max-height: 1000px; // Enough to show full content
+      opacity: 1;
+    }
+
+    .schedule-card {
+      background-color: $card-bg;
+      border-radius: $border-radius;
+      padding: 0.75rem;
+      @include font-settings($text-light);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+        background-color: lighten($card-bg, 5%);
+      }
+      
+    }
+  }
+
