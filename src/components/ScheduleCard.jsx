@@ -1,18 +1,21 @@
 import React from 'react';
+import './ScheduleCard.scss';
 
-function ScheduleCard({ title, description }) {
+function ScheduleCard({ title, description, time, date }) {
+  const formattedDate = date
+    ? new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+    : 'Date';
+
   return (
-    <div className="border border-gray-200 rounded-lg p-6">
-      <div className="flex">
-        <div className="w-1/6 mr-4">
-          <div className="bg-gray-200 h-24 w-full rounded"></div>
-        </div>
-        <div className="w-5/6">
-          <h3 className="text-xl font-semibold mb-2">{title}</h3>
-          <p className="text-gray-600 mb-4">{description}</p>
-          <button className="bg-gray-200 text-gray-700 px-3 py-1 rounded hover:bg-gray-300">
-            Button
-          </button>
+    <div className="custom-card">
+      <div className="left-badge">
+        <div className="time">{time}</div>
+        <div className="date">{formattedDate}</div>
+      </div>
+      <div className="card-content">
+        <div className="text-content">
+          <h3 className="title" data-text={title}>{title}</h3>
+          {/* <p className="description" data-text={description}>{description}</p> */}
         </div>
       </div>
     </div>

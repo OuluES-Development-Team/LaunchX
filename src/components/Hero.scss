@@ -1,0 +1,90 @@
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+
+$duration: 5s;
+
+.head {
+  position: relative;
+  @include font-settings($text-light, 10rem, );
+  font-family: $font-family-geist;
+  color: transparent;
+  word-spacing: -0.5rem;
+
+  // 3D Outline Layer (Pseudo-element) with lighter, skinnier offsets
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    text-shadow:
+      /* Inner layer with #6f6fff at 0.25px offset */
+      -0.25px -0.25px 0 $shadow1,
+       0.25px -0.25px 0 $shadow1,
+      -0.25px  0.25px 0 $shadow1,
+       0.25px  0.25px 0 $shadow1,
+      /* Middle layer with #ff00c8 at 0.5px offset */
+      -0.25px -0.25px 0 $shadow2,
+       0.25px -0.25px 0 $shadow2,
+      -0.25px  0.25px 0 $shadow2,
+       0.25px  0.25px 0 $shadow2,
+      /* Outer layer with white at 1px offset */
+      -1px -1px 0 white,
+       1px -1px 0 white,
+      -1px  1px 0 white,
+       1px  1px 0 white;
+  }
+  // Animated Gradient Text (Top Layer)
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    @include shiny-text($duration);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+  }
+}
+
+.sub1 {
+  position: relative;
+  @include font-settings($text-light, 4rem, bold);
+  font-family: $font-family-geist;
+  color: transparent;
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    text-shadow:
+      -1px -1px 0 $text-shadow1,
+       1px -1px 0  $text-shadow1,
+      -3.5px  1px 0  $text-shadow1,
+       1px  1px 0  $text-shadow1,
+       -1px -1px 0 $shadow2,
+       1px -1px 0  $shadow2,
+      -5px  1px 0  $shadow2,
+       1px  1px 0  $shadow2;
+  }
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: $text-light;
+  }
+}

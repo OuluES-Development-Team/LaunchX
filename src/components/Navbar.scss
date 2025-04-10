@@ -1,0 +1,44 @@
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+
+.navbar {
+  background-color: $primary-color;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;              // ✅ Make sure it spans full width
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+
+    .logo-image {
+      height: 100px;
+      width: auto;
+    }
+
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    a {
+        position: relative;
+      @include font-settings($text-light, 1rem);
+      @include outline-text($text-light);
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}

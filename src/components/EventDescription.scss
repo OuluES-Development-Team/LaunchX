@@ -1,0 +1,92 @@
+@import "./styles/variables.scss";
+@import "./styles/mixins.scss";
+
+.event-section {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  background-color: black;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  .event-text {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-right: 0;
+
+    @media (min-width: 768px) {
+      width: 50%;
+      margin-bottom: 0;
+      padding-right: 2rem;
+    }
+
+    .event-title {
+      @include font-settings($text-light, 3rem, bold);
+      font-family: $font-family-geist;
+      color: transparent;
+      position: relative;
+
+      &::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        color: transparent;
+        text-shadow:
+          -1px -1px 0 $text-shadow1,
+           1px -1px 0 $text-shadow1,
+          -3.5px 1px 0 $text-shadow1,
+           1px 1px 0 $text-shadow1;
+      }
+
+      &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        color: $text-light;
+      }
+    }
+
+    .event-paragraph {
+      @include font-settings($text-blue, 1.5rem);
+      font-family: $font-family-geist;
+      position: relative;
+      @include outline-text($text-blue, $text-shadow1, 1.5rem); 
+}
+    .event-subtext{
+      @include font-settings($text-light);
+      font-family: $font-family-geist;
+      position: relative;
+      color: transparent;
+      @include outline-text($text-light);
+    }
+  }
+
+  .event-box {
+    width: 100%;
+    height: 16rem;
+    background-color: gray;
+    @include shiny-outline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+
+    .event-number {
+      font-size: 3.75rem;
+      color: #d1d5db;
+    }
+  }
+}

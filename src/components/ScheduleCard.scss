@@ -1,0 +1,87 @@
+// This file contains the styles for the ScheduleCard component.
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+
+.custom-card {
+  border-radius: 40px;
+  padding: 1.5rem;
+  background-color: $card-bg;
+  font-family: $font-family-geist;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+  @include shiny-outline;
+
+  &:hover {
+    transform: translateY(-5px);
+    background-color: lighten($card-bg, 5%);
+  }
+
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  .left-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    background-color: $shadow1;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    // box-shadow: 0 0 10px $shadow1;
+    min-width: 64px;
+    text-align: center;
+
+    .time {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .date {
+      font-size: 0.875rem;
+      line-height: 1.1;
+    }
+  }
+
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    .text-content {
+      .title {
+        @include font-settings($text-light, 2rem,);
+        color: transparent;
+        position: relative;
+        @include outline-text($text-light, $text-shadow1, 1.5rem);
+      }
+
+      .description {
+        @include font-settings($text-light, 1.1rem);
+        color: transparent;
+        @include outline-text($text-light);
+        margin-bottom: 1rem;
+      }
+
+      .custom-button {
+        padding: 0.5rem 1.25rem;
+        background-color: $button-hover-bg;
+        color: $button-text;
+        border: none;
+        border-radius: $border-radius;
+        font-family: $font-family-geist;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: lighten($button-hover-bg, 10%);
+        }
+      }
+    }
+  }
+}
