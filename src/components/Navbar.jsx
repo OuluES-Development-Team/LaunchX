@@ -14,7 +14,7 @@ function Navbar() {
     <a href="#info" data-text="Info">Info</a>
     <a href="#program" data-text="Program">Program</a>
     <a href="#partners" data-text="Partners">Partners</a>
-    <a href="#link" data-text="Link">Link</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfq001sSWRWhORsBVKgfUd8n914g1N3iUF5PiKM4Dd0eX6u6g/viewform" data-text="Register">Register</a>
     </div>
   </div>
 </nav>
