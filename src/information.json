@@ -151,8 +151,8 @@
     ],
     "mentors": [
         {
-            "name": "Dr. Jane Smith",
-            "description": "CEO of company A",
+            "name": "Jan Schmidt",
+            "description": "Startup Express Community Manager | CEO of Socfri Oy",
             "expertise": [
                 "Business Strategy",
                 "Growth Hacking",
@@ -160,8 +160,8 @@
             ]
         },
         {
-            "name": "John Doe",
-            "description": "Ambassador of Finland",
+            "name": "Jani Lehtovirta",
+            "description": "Founder / CEO at Lehtovirta Capital Oy",
             "expertise": [
                 "Software Development",
                 "Cloud Computing",
@@ -169,8 +169,8 @@
             ]
         },
         {
-            "name": "Emily Johnson",
-            "description": "GENERAL PARTNER",
+            "name": "Jarmo Lumpus",
+            "description": "Co-founder of Lyhytvuokraus.fi | Advisor in various Startups",
             "expertise": [
                 "Digital Marketing",
                 "Customer Acquisition",

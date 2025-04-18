@@ -8,9 +8,30 @@ import information from '../information.json';
 import './Mentor.scss';
 import Avatar from "../assets/Avatar.jpg";
 
+
+// Import speaker images
+import janSchmidt from "../assets/speakers/janSchmidt.jpg";
+import janiLehtovirta from "../assets/speakers/janiLehtovirta.jpg";
+import jarmoLumpus from "../assets/speakers/jarmoLumpus.jpg";
+// Add any additional speaker images as needed
+
+// Create a mapping of speaker names to their respective images
+const speakerImages = {
+  "Jan Schmidt": janSchmidt,
+  "Jani Lehtovirta": janiLehtovirta,
+  "Jarmo Lumpus": jarmoLumpus
+  // Add more mappings as needed
+};
+
+
 const Mentor = () => {
   const mentors = Array.isArray(information.mentors) ? information.mentors : [];
 
+
+const getSpeakerImage = (speakerName) => {
+  return speakerImages[speakerName] || defaultSpeaker;
+};
+  const defaultSpeaker = Avatar; // Default image if no specific image is found
   return (
     <Container className="d-flex flex-column align-items-center pt-5">
       <h1 className="mentor-heading mb-5" data-text="Speakers">Speakers</h1>
@@ -20,8 +41,8 @@ const Mentor = () => {
             <Card className="mentor-card">
               <Card.Img 
                 variant="top" 
-                src={"https://picsum.photos/500/400" }
-                alt="Mentor Image" 
+                src={getSpeakerImage(mentor.name)} 
+                alt={`${mentor.name} Image`} 
                 className="mentor-card-img" 
               />
               <Card.Body className="mentor-card-body">
