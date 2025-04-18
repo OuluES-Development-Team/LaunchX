@@ -52,7 +52,7 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   @include shiny-outline;
-  height: 400px; // Total card height; adjust if needed
+  height: 450px; // Total card height; adjust if needed
   display: flex;
   flex-direction: column;
   
@@ -65,16 +65,19 @@
 /* Mentor Card Image covers 70% of card height with black & white-to-color animation */
 .mentor-card-img {
   width: 100%;
-  height: 70%;
+  height: 65%;
   object-fit: cover;
   filter: grayscale(1);
   transition: filter 0.3s ease;
   
+
+  // I had to remove the color transition because they provided greyscale photo
+  // and only Jan Schimdt was in color which looked odd. So everything in greyscale
   /* When hovering over the card, transition to full color */
-  .mentor-card:hover &,
+  /* .mentor-card:hover &,
   &:hover {
     filter: grayscale(0);
-  }
+  } */
 }
 
 /* Mentor Card Body covers the remaining 30% */
