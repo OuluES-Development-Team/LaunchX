@@ -1,211 +1,251 @@
 {
-    "workshops": [
+    
+  "sponserships": [
+    {
+      "level": "Gold",
+      "price": "$10,000",
+      "benefits": [
+        "Logo on event website and marketing materials",
+        "Mention in opening and closing remarks",
+        "Dedicated sponsor booth at the Outdoor Startup Fair",
+        "Opportunity to introduce a workshop or speaker"
+      ]
+    },
+    {
+      "level": "Silver",
+      "price": "$5,000",
+      "benefits": [
+        "Logo on event website and marketing materials",
+        "Mention in opening and closing remarks",
+        "Shared sponsor booth at the Outdoor Startup Fair"
+      ]
+    },
+    {
+      "level": "Bronze",
+      "price": "$2,500",
+      "benefits": [
+        "Logo on event website and marketing materials",
+        "Mention in opening and closing remarks"
+      ]
+    }
+  ],
+  "sponsorships": [
       {
-        "title": "Establishing the Business Model and Validating Ideas",
-        "focus": "Business Model Canvas, Market Validation, Branding",
-        "dates": [
-          {"date": "2025-06-02", "startTime": "16:30", "endTime": "18:30"},
-          {"date": "2025-06-03", "startTime": "16:30", "endTime": "18:30"}
-        ],
-        "topics": [
-          "Introduction to defining your business model and value proposition",
-          "Hands-on exercises to refine your Lean Canvas",
-          "Methods for testing ideas and gaining customer feedback",
-          "Creating a compelling brand identity and positioning a startup"
-        ],
-        "office_hours": "One-on-one mentoring sessions before or after workshops",
-        "networking": "Slack channels for informal connections with mentors and peers",
-        "deliverables": [
-          "Validated Lean Canvas",
-          "60-second elevator pitch"
-        ]
+          "name": "Gold Partners",
+          "description": "The Gold Sponsorship package includes premium benefits for maximum visibility."
       },
       {
-        "title": "Prototyping & Business Development",
-        "focus": "Turning ideas into prototypes and refining business models",
-        "dates": [
-          {"date": "2025-06-05", "startTime": "16:30", "endTime": "18:30"},
-          {"date": "2025-06-06", "startTime": "16:30", "endTime": "18:30"}
-        ],
-        "topics": [
-          "Building MVPs using Figma and Bubble",
-          "Refining the Business Model Canvas based on customer feedback"
-        ],
-        "virtual_component": "Collaborative work using Figma and Bubble, check-in sessions for feedback",
-        "office_hours": "One-on-one mentoring to refine MVP or discuss business decisions",
-        "networking": "Slack and video chat access to mentors",
-        "deliverables": [
-          "Working MVP prototype",
-          "Refined Business Model Canvas"
-        ]
+          "name": "Networking Partners",
+          "description": "The Silver Sponsorship package offers great benefits for visibility and engagement."
       },
       {
-        "title": "Scaling & Market Strategy",
-        "focus": "Growing the business and acquiring customers",
-        "dates": [
-          {"date": "2025-06-09", "startTime": "16:30", "endTime": "18:30"},
-          {"date": "2025-06-10", "startTime": "16:30", "endTime": "18:30"}
-        ],
-        "topics": [
-          "Growth hacking strategies",
-          "Digital marketing and customer acquisition",
-          "Sales funnel design and closing sales"
-        ],
-        "virtual_component": "Webinars on fundraising and scaling strategies, live Q&A with successful entrepreneurs",
-        "office_hours": "One-on-one mentoring on growth strategies and fundraising",
-        "networking": "Slack and Zoom discussions with mentors",
-        "deliverables": [
-          "Comprehensive marketing and sales strategy",
-          "Refined investor-ready pitch deck"
-        ]
-      },
-      {
-        "title": "Pitch Preparation & Refinement",
-        "focus": "Perfecting the pitch and preparing for the final presentation",
-        "dates": [{"date": "2025-06-12", "startTime": "16:30", "endTime": "18:30"}],
-        "topics": [
-          "Crafting a compelling 5-minute pitch",
-          "Pitch practice with mentor feedback",
-          "Booth setup guidance for the Outdoor Startup Fair"
-        ],
-        "virtual_component": "Pre-recorded and live-streamed pitch sessions, mentor feedback on pitch decks",
-        "office_hours": "Final pitch rehearsals and script reviews",
-        "networking": "Mentors available for last-minute advice",
-        "deliverables": [
-          "Polished pitch deck",
-          "Finalized 5-minute pitch script"
-        ]
+          "name": "Media Partner",
+          "description": "The Bronze Sponsorship package provides essential visibility for your brand."
       }
-    ],
-    "events": [
+  ],
+  "mentors": [
       {
-        "title": "Pitch Day",
-        "date": "2025-06-13",
-        "time": "15:00-17:00",
-        "activities": [
-          "Live pitching to investors, mentors, and industry leaders",
-          "Award ceremony with categories like Best Pitch, Most Scalable Idea, and Audience Favorite"
-        ]
+          "name": "Jan Schmidt",
+          "description": "Startup Express Community Manager | CEO of Socfri Oy",
+          "expertise": [
+              "Business Strategy",
+              "Growth Hacking",
+              "Fundraising"
+          ]
       },
       {
-        "title": "Outdoor Startup Fair",
-        "date": "2025-06-14",
-        "time": "10:00-16:00",
-        "activities": [
-          "Startups showcase MVPs in physical and virtual booths",
-          "Networking with investors and industry peers",
-          "Evening keynote session"
-        ]
+          "name": "Jani Lehtovirta",
+          "description": "Founder / CEO at Lehtovirta Capital Oy",
+          "expertise": [
+              "Software Development",
+              "Cloud Computing",
+              "Agile Methodologies"
+          ]
       },
       {
-        "title": "Nordic Retreat & Closing Ceremony",
-        "date": "2025-06-14",
-        "activities": [
-          "In-person: Sauna experiences, kayaking under the Midnight Sun",
-          "Virtual: Wellness webinars and live-streamed closing ceremony"
-        ]
+          "name": "Jarmo Lumpus",
+          "description": "Co-founder of Lyhytvuokraus.fi | Advisor in various Startups",
+          "expertise": [
+              "Digital Marketing",
+              "Customer Acquisition",
+              "Brand Strategy"
+          ]
       }
-    ],
-    "sponserships": [
+  ],
+  "teams": [
       {
-        "level": "Gold",
-        "price": "$10,000",
-        "benefits": [
-          "Logo on event website and marketing materials",
-          "Mention in opening and closing remarks",
-          "Dedicated sponsor booth at the Outdoor Startup Fair",
-          "Opportunity to introduce a workshop or speaker"
-        ]
+          "name": "Team Alpha",
+          "description": "A group of innovators working on a sustainable energy solution.",
+          "members": [
+              "Alice Brown",
+              "Bob Green",
+              "Charlie White"
+          ]
       },
       {
-        "level": "Silver",
-        "price": "$5,000",
-        "benefits": [
-          "Logo on event website and marketing materials",
-          "Mention in opening and closing remarks",
-          "Shared sponsor booth at the Outdoor Startup Fair"
-        ]
+          "name": "Team Beta",
+          "description": "A team focused on developing AI-driven healthcare solutions.",
+          "members": [
+              "David Black",
+              "Eve Blue",
+              "Frank Yellow"
+          ]
       },
       {
-        "level": "Bronze",
-        "price": "$2,500",
-        "benefits": [
-          "Logo on event website and marketing materials",
-          "Mention in opening and closing remarks"
-        ]
+          "name": "Team Gamma",
+          "description": "A startup team creating a platform for remote team collaboration.",
+          "members": [
+              "Grace Red",
+              "Hank Orange",
+              "Ivy Purple"
+          ]
       }
-    ],
-    "sponsorships": [
-        {
-            "name": "Gold Partners",
-            "description": "The Gold Sponsorship package includes premium benefits for maximum visibility."
-        },
-        {
-            "name": "Networking Partners",
-            "description": "The Silver Sponsorship package offers great benefits for visibility and engagement."
-        },
-        {
-            "name": "Media Partner",
-            "description": "The Bronze Sponsorship package provides essential visibility for your brand."
-        }
-    ],
-    "mentors": [
-        {
-            "name": "Jan Schmidt",
-            "description": "Startup Express Community Manager | CEO of Socfri Oy",
-            "expertise": [
-                "Business Strategy",
-                "Growth Hacking",
-                "Fundraising"
-            ]
-        },
-        {
-            "name": "Jani Lehtovirta",
-            "description": "Founder / CEO at Lehtovirta Capital Oy",
-            "expertise": [
-                "Software Development",
-                "Cloud Computing",
-                "Agile Methodologies"
-            ]
-        },
-        {
-            "name": "Jarmo Lumpus",
-            "description": "Co-founder of Lyhytvuokraus.fi | Advisor in various Startups",
-            "expertise": [
-                "Digital Marketing",
-                "Customer Acquisition",
-                "Brand Strategy"
-            ]
-        }
-    ],
-    "teams": [
-        {
-            "name": "Team Alpha",
-            "description": "A group of innovators working on a sustainable energy solution.",
-            "members": [
-                "Alice Brown",
-                "Bob Green",
-                "Charlie White"
-            ]
-        },
-        {
-            "name": "Team Beta",
-            "description": "A team focused on developing AI-driven healthcare solutions.",
-            "members": [
-                "David Black",
-                "Eve Blue",
-                "Frank Yellow"
-            ]
-        },
-        {
-            "name": "Team Gamma",
-            "description": "A startup team creating a platform for remote team collaboration.",
-            "members": [
-                "Grace Red",
-                "Hank Orange",
-                "Ivy Purple"
-            ]
-        }
-    ]
-  }
-  
+  ],
+  "programInfo": {
+      "duration": "2 Weeks (June 2025)",
+      "location": "Workshops at Tellus or Business Corner, Oulu University, with outdoor venues for events",
+      "model": "In-person model to maximize flexibility and engagement. Participants will be able to join workshops, attend in-person networking events, and engage with mentors during office hours."
+  },
+  "workshops": [
+      {
+          "title": "Kickoff Event",
+          "instructor": "",
+          "dates": [
+              {
+                  "date": "31-5-2025",
+                  "day": "Saturday",
+                  "startTime": "10:00",
+                  "endTime": "16:00"
+              }
+          ],
+          "description": "Program introduction and team building activities"
+      },
+      {
+          "title": "Workshop 1: Foundations of Startup Success",
+          "instructor": "Jan Schmidt",
+          "dates": [
+              {
+                  "date": "2-6-2025",
+                  "day": "Monday",
+                  "startTime": "16:30",
+                  "endTime": "18:30"
+              },
+              {
+                  "date": "3-6-2025",
+                  "day": "Tuesday",
+                  "startTime": "16:30",
+                  "endTime": "18:30"
+              }
+          ],
+          "description": "Establishing the business model and validating ideas. Covers Business Model Canvas, Market Validation, and Branding. Deliverables: Validated Lean Canvas and a 60-second elevator pitch.",
+          "topics": [
+              "Business Model Canvas",
+              "Market Validation",
+              "Branding"
+          ]
+      },
+      {
+          "title": "Workshop 2: Prototyping & Business Development",
+          "instructor": ["Jason Brower", "Jani Lehtovirta"],
+          "dates": [
+              {
+                  "date": "5-6-2025",
+                  "day": "Thursday",
+                  "startTime": "16:30",
+                  "endTime": "18:30"
+              },
+              {
+                  "date": "6-6-2025",
+                  "day": "Friday",
+                  "startTime": "16:30",
+                  "endTime": "18:30"
+              }
+          ],
+          "description": "Turning ideas into prototypes and refining business models. Learn how to build MVPs and refine your Business Model Canvas. Deliverables: A working MVP prototype and a refined Business Model Canvas.",
+          "topics": [
+              "Prototyping",
+              "Business Model Refinement"
+          ]
+      },
+      {
+          "title": "Workshop 3: Scaling & Market Strategy",
+          "instructor": "",
+          "dates": [
+              {
+                  "date": "9-6-2025",
+                  "day": "Monday",
+                  "startTime": "16:30",
+                  "endTime": "18:30"
+              },
+              {
+                  "date": "10-6-2025",
+                  "day": "Tuesday",
+                  "startTime": "16:30",
+                  "endTime": "18:30"
+              }
+          ],
+          "description": "Growing the business and acquiring customers. Learn cost-effective strategies for scaling rapidly, building effective digital marketing strategies, and designing a customer acquisition funnel. Deliverables: A comprehensive marketing and sales strategy and a refined investor-ready pitch deck.",
+          "topics": [
+              "Growth Hacking",
+              "Digital Marketing & Customer Acquisition",
+              "Sales Strategy"
+          ]
+      },
+      {
+          "title": "Workshop 4: Pitch Preparation & Refinement",
+          "instructor": "Jarmo Lumpus",
+          "dates": [
+              {
+                  "date": "12-6-2025",
+                  "day": "Thursday",
+                  "startTime": "16:30",
+                  "endTime": "18:30"
+              }
+          ],
+          "description": "Perfecting the pitch and preparing for the final presentation. Learn how to craft a compelling 5-minute pitch and receive feedback from mentors. Deliverables: A polished pitch deck and a 5-minute pitch script.",
+          "topics": [
+              "Pitching Techniques",
+              "Booth Setup for Outdoor Startup Fair"
+          ]
+      },
+      {
+          "title": "Pitch Day",
+          "instructor": "",
+          "dates": [
+              {
+                  "date": "13-6-2025",
+                  "day": "Friday",
+                  "startTime": "15:00",
+                  "endTime": "17:00"
+              }
+          ],
+          "description": "Live pitching to a panel of investors, mentors, and industry leaders, followed by dinner. Award Ceremony for categories such as Best Pitch, Most Scalable Idea, and Audience Favorite."
+      },
+      {
+          "title": "Outdoor Startup Fair",
+          "instructor": "",
+          "dates": [
+              {
+                  "date": "14-6-2025",
+                  "day": "Saturday",
+                  "startTime": "10:00",
+                  "endTime": "16:00"
+              }
+          ],
+          "description": "Startups present their MVPs in booths (physical and virtual). Networking with investors and peers. Keynote session in the evening, followed by after party."
+      },
+      {
+          "title": "Nordic Retreat & Closing Ceremony",
+          "instructor": "",
+          "dates": [
+              {
+                  "date": "15-6-2025",
+                  "day": "Sunday",
+                  "startTime": "11:00",
+                  "endTime": "18:00"
+              }
+          ],
+          "description": "Relaxing activities like sauna experiences and kayaking under the Midnight Sun. Official closing of the program with certificates and final networking."
+      }
+  ]
+}

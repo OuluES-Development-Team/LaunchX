@@ -12,7 +12,7 @@
     align-items: center;
     width: 100%;              // ✅ Make sure it spans full width
     max-width: 1800px;
-    margin: 0 auto;
+    margin: auto;
   }
 
   .logo {
@@ -20,6 +20,7 @@
     align-items: center;
     gap: 0.5rem;
     flex-shrink: 0;
+    margin-left: 1rem;
 
     .logo-image {
       height: 100px;
@@ -31,6 +32,7 @@
   .nav-links {
     display: flex;
     gap: 1.5rem;
+    margin-right: 1rem;
     a {
         position: relative;
       @include font-settings($text-light, 1rem);
