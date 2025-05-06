@@ -53,15 +53,12 @@
 
     .text-content {
       .title {
-        @include font-settings($text-light, 2rem,);
+        @include font-settings($shadow1, 1.5rem, bold);
         color: transparent;
         position: relative;
-        @include outline-text($text-light, $text-shadow1, 1.5rem);
       }
       .instructor {
-        @include font-settings($text-light, 1.25rem);
-        color: transparent;
-        @include outline-text($text-light);
+        @include font-settings($text-blue, 1rem);
         margin-bottom: 0.5rem;
       }
       .description {
@@ -80,7 +77,7 @@
         
         h4 {
           @include font-settings($text-blue, 1.2rem, bold);
-          color: transparent;
+    
           @include outline-text($text-blue, $text-shadow1, 1.2rem);
           margin-bottom: 0.5rem;
         }

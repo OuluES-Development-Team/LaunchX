@@ -39,7 +39,7 @@ function ScheduleCard({ title, description, time, date, instructor }) {
           <p className="description" data-text={mainDescription}>{mainDescription}</p>
           {deliverables && (
             <div className="deliverables">
-              <h4>Deliverables:</h4>
+              <h4 data-text={"Deliverables:"}>Deliverables:</h4>
               <p data-text={deliverables}>{deliverables}</p>
             </div>
           )}

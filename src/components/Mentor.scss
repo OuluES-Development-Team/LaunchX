@@ -98,7 +98,32 @@
   color: white;
   position: relative;
   margin: 0;
-  @include outline-text($text-light, $text-shadow1, 1.4rem);
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    text-shadow:
+      -1px -1px 0 $text-shadow1,
+       1px -1px 0 $text-shadow1,
+      -2px 1px 0 $text-shadow1,
+       1px 1px 0 $text-shadow1;
+  }
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: $text-light;
+  }
 }
 
 /* Mentor Card Description */

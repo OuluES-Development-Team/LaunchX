@@ -2,6 +2,9 @@ import React from 'react';
 import ScheduleCard from './ScheduleCard';
 import information from '../information.json';
 import './EventSchedule.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot }    from '@fortawesome/free-solid-svg-icons';
+
 
 function EventSchedule() {
   // Sort events chronologically by the first date in each workshop's dates array
@@ -51,7 +54,10 @@ function EventSchedule() {
       </p>
       
       <div className="schedule-info">
-        <p>{programInfo.location}</p>
+        <p data-text={programInfo.location}>
+          <FontAwesomeIcon icon={faLocationDot} className="location-icon" />
+          {programInfo.location}
+        </p>
       </div>
 
       <div className="schedule-list expanded">

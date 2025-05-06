@@ -45,18 +45,22 @@
   }
 
   .event-subheading {
-    @include font-settings($text-blue, 1.5rem);
-    margin-bottom: 1rem;
-    @include outline-text($text-blue, $text-shadow1, 1.5rem);
+    @include font-settings($text-blue, 1.2rem);
+    @include outline-text($text-blue, $text-shadow1, 1.2rem);
   }
 
   .schedule-info {
     margin-bottom: 2rem;
-    
+  
     p {
-      @include font-settings($text-light, 1rem);
-      margin-bottom: 0.5rem;
-      @include outline-text($text-light, $text-shadow1, 1rem);
+      @include font-settings($text-shadow1, 1rem);
+      .location-icon {
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        color: $text-light;
+        font-size: 1rem; // match your paragraph font-size
+        color: $text-shadow1;
+      }
     }
   }
 

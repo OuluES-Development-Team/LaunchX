@@ -69,12 +69,9 @@ $duration: 5s;
     text-shadow:
       -1px -1px 0 $text-shadow1,
        1px -1px 0  $text-shadow1,
-      -3.5px  1px 0  $text-shadow1,
-       1px  1px 0  $text-shadow1,
-       -1px -1px 0 $shadow2,
-       1px -1px 0  $shadow2,
-      -5px  1px 0  $shadow2,
-       1px  1px 0  $shadow2;
+      -2.5px  1px 0  $text-shadow1, 
+       1px  1px 0  $text-shadow1;
+  
   }
 
   &::after {
