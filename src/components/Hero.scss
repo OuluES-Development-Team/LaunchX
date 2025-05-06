@@ -53,7 +53,7 @@ $duration: 5s;
 
 .sub1 {
   position: relative;
-  @include font-settings($text-light, 4rem, bold);
+  @include font-settings($text-light, 2rem, bold);
   font-family: $font-family-geist;
   color: transparent;
 
@@ -69,12 +69,9 @@ $duration: 5s;
     text-shadow:
       -1px -1px 0 $text-shadow1,
        1px -1px 0  $text-shadow1,
-      -3.5px  1px 0  $text-shadow1,
-       1px  1px 0  $text-shadow1,
-       -1px -1px 0 $shadow2,
-       1px -1px 0  $shadow2,
-      -5px  1px 0  $shadow2,
-       1px  1px 0  $shadow2;
+      -2.5px  1px 0  $text-shadow1, 
+       1px  1px 0  $text-shadow1;
+  
   }
 
   &::after {
