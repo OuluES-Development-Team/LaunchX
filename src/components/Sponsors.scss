@@ -11,93 +11,63 @@
     margin-bottom: 3rem;
     position: relative;
     color: transparent;
-      position: relative;
 
-      &::before {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        width: 100%;
-        height: 100%;
-        color: transparent;
-        text-shadow:
-          -1px -1px 0 $text-shadow1,
-           1px -1px 0 $text-shadow1,
-          -3.5px 1px 0 $text-shadow1,
-           1px 1px 0 $text-shadow1;
-      }
-
-      &::after {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        color: $text-light;
-      }
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      color: transparent;
+      text-shadow:
+        -1px -1px 0 $text-shadow1,
+         1px -1px 0 $text-shadow1,
+        -3.5px 1px 0 $text-shadow1,
+         1px 1px 0 $text-shadow1;
     }
 
-  p {
-    font-size: 1.25rem;
-    color: transparent;
-    margin-bottom: 3rem;
-    @include outline-text($text-blue, $text-shadow1, 1.25rem);
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      color: $text-light;
+    }
   }
 
-  .sponsor-tier-section {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  .sponsor-card {
-    background-color: $card-bg; // gray background
+  .sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
     padding: 2rem;
+    background-color: $card-bg; // gray background
     border-radius: $border-radius;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-    text-align: center;
-    @include shiny-outline;
+  }
 
-    .tier-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-      color: transparent;
-      position: relative;
-      @include outline-text($text-light, $text-shadow1, 1.5rem);
-    }
-
-    .sponsor-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1rem;
-
-      .image-placeholder {
-        width: 150px;
-        height: 80px;
-        background-color: lighten(#333, 10%);
-        border-radius: $border-radius;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $text-light;
-        font-weight: 600;
-        font-size: 0.85rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-      }
-    }
-
-    .description {
-      font-size: 1rem;
-      color: $text-light;
-      max-width: 600px;
-      margin: 0 auto;
+  .sponsor-logo {
+    width: 150px;
+    height: 150px; // Make the container square for consistent aspect ratio
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius;
+    background-color: transparent;
+    box-shadow: none;
+    overflow: hidden;
+  
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; // Ensure the image fits within the container
+      object-position: center; // Center the image within the container
     }
   }
 }
