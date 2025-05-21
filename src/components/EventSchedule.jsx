@@ -47,49 +47,43 @@ function EventSchedule() {
   };
 
   return (
-    <div className="event-schedule">
-      <h2 data-text="Event Schedule">Event Schedule</h2>
-      <p className="event-subheading" data-text={`${programInfo.duration}`}>
-        {programInfo.duration}
-      </p>
-      
-      <div className="schedule-info">
-        <p data-text={programInfo.location}>
-          <FontAwesomeIcon icon={faLocationDot} className="location-icon" />
-          {programInfo.location}
-        </p>
-      </div>
-
-      <div className="schedule-list expanded">
-        {scheduleItems.map((item, index) => {
-          const firstDate = item.dates?.[0];
-          const date = firstDate?.date;
-          const startTime = firstDate?.startTime;
-          const endTime = firstDate?.endTime;
-          const day = firstDate?.day;
-
-          // Format date with Intl.DateTimeFormat and include day of week if available
-          const formattedDate = date ? 
-            (day ? `${day}, ${formatDate(date)}` : formatDate(date)) : 
-            '';
-          
-          const timeInfo = startTime && endTime ? 
-            `${startTime} - ${endTime}` : 
-            startTime ? `${startTime}` : '';
-
-          return (
-            <div className="schedule-card" key={index}>
-              <ScheduleCard
-                title={item.title}
-                date={formattedDate}
-                time={timeInfo}
-                description={item.description}
-                instructor={item.instructor}
-              />
-            </div>
-          );
-        })}
-      </div>
+    <div className="schedule-list expanded">
+      {scheduleItems.map((item, index) => {
+        const dates = item.dates || []; 
+  
+        const formattedDates = dates.map((dateObj) => {
+          const { date, day } = dateObj;
+          return date
+            ? day
+              ? `${day}, ${formatDate(date)}`
+              : formatDate(date)
+            : '';
+        });
+  
+        const times = dates.map((dateObj) => {
+          const { startTime, endTime } = dateObj;
+          return startTime && endTime
+            ? `${startTime} - ${endTime}`
+            : startTime
+            ? `${startTime}`
+            : '';
+        });
+  
+        const locations = dates.map((dateObj) => dateObj.location || '');
+  
+        return (
+          <div className="schedule-card" key={index}>
+            <ScheduleCard
+              title={item.title}
+              date={formattedDates} // Pass all formatted dates
+              time={times} // Pass all times
+              location={locations} // Pass all locations
+              description={item.description}
+              instructor={item.instructor}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }

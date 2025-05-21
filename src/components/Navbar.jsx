@@ -1,13 +1,12 @@
 import React from 'react';
 import './Navbar.scss';
-import logo from '../assets/LaunchX-logo.png';
 
 function Navbar() {
   return (
     <nav className="navbar">
   <div className="navbar-container">
     <div className="logo">
-      <img src={logo} alt="LaunchX Logo" className="logo-image" />
+      <img src="https://res.cloudinary.com/daf9up52k/image/upload/v1747733532/LaunchX-logo_ynnvn5.png" alt="LaunchX Logo" className="logo-image" />
     </div>
 
     <div className="nav-links">

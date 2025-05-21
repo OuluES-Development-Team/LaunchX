@@ -6,20 +6,13 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import information from '../information.json'; 
 import './Mentor.scss';
-import Avatar from "../assets/Avatar.jpg";
 
-
-// Import speaker images
-import janSchmidt from "../assets/speakers/janSchmidt.jpg";
-import janiLehtovirta from "../assets/speakers/janiLehtovirta.jpg";
-import jarmoLumpus from "../assets/speakers/jarmoLumpus.jpg";
-// Add any additional speaker images as needed
 
 // Create a mapping of speaker names to their respective images
 const speakerImages = {
-  "Jan Schmidt": janSchmidt,
-  "Jani Lehtovirta": janiLehtovirta,
-  "Jarmo Lumpus": jarmoLumpus
+  "Jan Schmidt": "https://res.cloudinary.com/daf9up52k/image/upload/v1747733061/janSchmidt_lpfhcz.jpg",
+  "Jason Browser": "https://res.cloudinary.com/daf9up52k/image/upload/v1747748220/JasonBrowser_hj5rh9.jpg",
+  "Jarmo Lumpus": "https://res.cloudinary.com/daf9up52k/image/upload/v1747733062/jarmoLumpus_fzxibn.jpg"
   // Add more mappings as needed
 };
 
@@ -31,7 +24,7 @@ const Mentor = () => {
 const getSpeakerImage = (speakerName) => {
   return speakerImages[speakerName] || defaultSpeaker;
 };
-  const defaultSpeaker = Avatar; // Default image if no specific image is found
+  const defaultSpeaker = "https://res.cloudinary.com/daf9up52k/image/upload/v1747733388/Avatar_yh6dlr.jpg"; // Default image if no specific image is found
   return (
     <Container className="d-flex flex-column align-items-center pt-5">
       <h1 className="mentor-heading mb-5" data-text="Speakers">Speakers</h1>

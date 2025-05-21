@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import information from '../information.json'; 
 import './Team.scss';
-import Avatar from "../assets/Avatar.jpg";
+
 
 const Team = () => {
   const teams = Array.isArray(information.teams) ? information.teams : [];
@@ -21,7 +21,7 @@ const Team = () => {
               <Row className="g-0 align-items-center">
               <Col md={3} className="d-flex justify-content-center align-items-center">
                   <Card.Img
-                    src={Avatar}
+                    src="https://res.cloudinary.com/daf9up52k/image/upload/v1747733388/Avatar_yh6dlr.jpg"
                     alt="Team Image"
                     className="team-card-img"
                   />
