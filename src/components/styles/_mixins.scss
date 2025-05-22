@@ -142,10 +142,10 @@
      0.25px  0.25px 0 $shadow2,
 
     /* Outer layer*/
-    -1px -1px 0 white,
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white;
+    -0.5px -0.5px 0 white,
+     0.5px -0.5px 0 white,
+    -0.5px  0.5px 0 white,
+     0.5px  0.5px 0 white;
     
      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
 

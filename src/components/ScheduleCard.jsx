@@ -1,5 +1,7 @@
 import React from "react";
 import "./ScheduleCard.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 function ScheduleCard({ title, description, time, date, instructor, location }) {
   // Process description to separate deliverables if present
@@ -33,7 +35,10 @@ function ScheduleCard({ title, description, time, date, instructor, location }) 
             <div key={index} className="date-time">
               <div className="time">{time[index]}</div>
               <div className="date">{d}</div>
-              <div className="location">{location[index]}</div>
+              <div className="location">
+                <FontAwesomeIcon icon={faLocationDot} className="location-icon" />
+                {location[index]}
+              </div>
             </div>
           ))
         ) : (
