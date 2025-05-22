@@ -47,9 +47,10 @@
     justify-items: center;
     align-items: center;
     padding: 2rem;
-    background-color: $card-bg; // gray background
+    background-color: $text-shadow1; // gray background
     border-radius: $border-radius;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    @include shiny-outline;
   }
 
   .sponsor-logo {
