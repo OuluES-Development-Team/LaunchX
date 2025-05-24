@@ -21,7 +21,6 @@ function App() {
         <EventSchedule />
         <Mentor />
         <Ticket />
-        {/* <Team /> */}
         <Sponsors />
       </div>
       <Footer />

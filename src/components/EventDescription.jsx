@@ -3,7 +3,7 @@ import './EventDescription.scss';
 
 function EventDescription() {
   return (
-    <div className="event-section">
+    <div className="event-section" id="about">
       <div className="event-text">
         <h1 className="event-title" data-text="About LaunchX">
           About LaunchX

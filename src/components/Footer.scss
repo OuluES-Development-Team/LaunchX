@@ -1,0 +1,170 @@
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+
+.footer-container {
+  padding: 4rem 1rem;
+  background-color: $primary-color;
+  color: $text-light;
+  font-family: $font-family-geist;
+  border-top: 1px solid $shadow1;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.footer-brand {
+  margin-bottom: 1.5rem;
+  
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-title {
+  @include font-settings($text-light, 2rem, bold);
+  position: relative;
+  margin-bottom: 0.5rem;
+  
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    text-shadow:
+      -1px -1px 0 $text-shadow1,
+       1px -1px 0 $text-shadow1,
+      -2px 1px 0 $text-shadow1,
+       1px 1px 0 $text-shadow1;
+  }
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: $text-light;
+  }
+}
+
+.footer-subtitle {
+  @include font-settings($text-blue, 1rem);
+  @include outline-text($text-blue, $text-shadow1, 1rem);
+  max-width: none;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer-heading {
+  @include font-settings($shadow1, 1.2rem, bold);
+  position: relative;
+  margin-bottom: 1rem;
+  
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    text-shadow:
+      -0.5px -0.5px 0 $text-shadow1,
+       0.5px -0.5px 0 $text-shadow1,
+      -1px 0.5px 0 $text-shadow1,
+       0.5px 0.5px 0 $text-shadow1;
+  }
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: $text-light;
+  }
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    margin-bottom: 0.5rem;
+    @include font-settings($text-light, 1rem);
+    position: relative;
+    color: transparent;
+  }
+  a {
+    @include font-settings($text-blue, 1rem);
+      font-family: $font-family-geist;
+      position: relative;
+        color: transparent;
+    text-decoration: none;
+      
+      
+      &:hover {
+        transform: translateX(3px);
+        color: $shadow1;
+      }
+    }
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $card-bg;
+  color: $text-light;
+  transition: all 0.3s ease;
+  @include shiny-outline;
+  
+  &:hover {
+    transform: translateY(-3px);
+    color: $shadow1;
+  }
+}
+
+.footer-copyright {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba($shadow1, 0.3);
+  text-align: center;
+  
+  p {
+    @include font-settings($text-light, 0.9rem);
+    @include outline-text($text-light, $text-shadow1, 0.9rem);
+  }
+}

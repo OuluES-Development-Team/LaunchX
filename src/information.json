@@ -66,23 +66,6 @@
       ]
     }
   ],
-  "teams": [
-    {
-      "name": "Team Alpha",
-      "description": "A group of innovators working on a sustainable energy solution.",
-      "members": ["Alice Brown", "Bob Green", "Charlie White"]
-    },
-    {
-      "name": "Team Beta",
-      "description": "A team focused on developing AI-driven healthcare solutions.",
-      "members": ["David Black", "Eve Blue", "Frank Yellow"]
-    },
-    {
-      "name": "Team Gamma",
-      "description": "A startup team creating a platform for remote team collaboration.",
-      "members": ["Grace Red", "Hank Orange", "Ivy Purple"]
-    }
-  ],
   "programInfo": {
     "duration": "2 Weeks (June 2025)",
     "location": "Workshops at Tellus or Business Corner, Oulu University, with outdoor venues for events",
@@ -104,7 +87,7 @@
       "description": "Program introduction and team building activities"
     },
     {
-      "title": "Workshop 1: Foundations of Startup Success",
+      "title": "Workshop 1: Business Model Development",
       "instructor": "Jan Schmidt",
       "dates": [
         {
@@ -126,7 +109,7 @@
       "topics": ["Business Model Canvas", "Market Validation", "Branding"]
     },
     {
-      "title": "Workshop 2: Prototyping & Business Development",
+      "title": "Workshop 2: Prototyping & Product Development",
       "instructor": ["Jason Brower"],
       "dates": [
         {
@@ -148,7 +131,7 @@
       "topics": ["Prototyping", "Business Model Refinement"]
     },
     {
-      "title": "Workshop 3: Scaling & Market Strategy",
+      "title": "Workshop 3: Scaling & Growth",
       "instructor": "",
       "dates": [
         {

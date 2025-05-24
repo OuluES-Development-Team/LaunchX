@@ -28,7 +28,7 @@ function EventSchedule() {
   };
 
   return (
-    <div className="event-schedule">
+    <div className="event-schedule" id="schedule">
       <h2 data-text="Event Schedule">Event Schedule</h2>
 
       <div className="schedule-list expanded">

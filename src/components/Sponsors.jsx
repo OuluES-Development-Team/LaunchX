@@ -6,7 +6,7 @@ function Sponsors() {
   const partners = Array.isArray(information.partners) ? information.partners : [];
 
   return (
-    <div className='sponsors'>
+    <div className='sponsors' id="sponsors">
       <h2 data-text="OUR PARTNERS">OUR PARTNERS</h2>
 
       <div className='sponsor-grid'>

@@ -3,9 +3,7 @@
 
 .navbar {
   background-color: $primary-color;
-  padding: 1rem 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
   .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -33,6 +31,7 @@
     display: flex;
     gap: 1.5rem;
     margin-right: 1rem;
+    align-items: center;
     a {
         position: relative;
       @include font-settings($text-light, 1rem);
@@ -42,5 +41,24 @@
         color: $hover-color;
       }
     }
+    #register-button {
+    background-color: $shadow1; // Use a color that stands out
+    border-radius: $border-radius;
+    padding: 0.5rem 1rem;
+    @include shiny-outline; // Add the shiny outline effect if you want
+    
+    &:hover {
+      transform: translateY(-3px);
+      background-color: darken($shadow1, 10%);
+    }
+    
+    &::before {
+      display: none; // Remove the outline text effect if it interferes
+    }
+    
+    &::after {
+      display: none; // Remove the outline text effect if it interferes
+    }
+  }
   }
 }
