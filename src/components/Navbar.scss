@@ -4,6 +4,7 @@
 .navbar {
   background-color: $primary-color;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
   .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -11,6 +12,14 @@
     width: 100%;              // ✅ Make sure it spans full width
     max-width: 1800px;
     margin: auto;
+    flex-direction: column; 
+    padding: 0.5rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: stretch;
+      padding: 0.5rem 0;
+    }
   }
 
   .logo {
@@ -24,6 +33,10 @@
       height: 100px;
       width: auto;
     }
+
+    @media (min-width: 768px) {
+        height: 100px;
+      }
 
   }
 
@@ -60,5 +73,8 @@
       display: none; // Remove the outline text effect if it interferes
     }
   }
+  @media (min-width: 768px) {
+        font-size: 1rem;
+      }
   }
 }

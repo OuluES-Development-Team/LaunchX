@@ -5,12 +5,11 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="logo">
+        <a className="logo" href='#'>
           <img src="https://res.cloudinary.com/daf9up52k/image/upload/v1747733532/LaunchX-logo_ynnvn5.png" alt="LaunchX Logo" className="logo-image" />
-        </div>
+        </a>
 
         <div className="nav-links">
-          <a href="#" className="nav-link" data-text="Home">Home</a>
           <a href="#about" className="nav-link" data-text="About">About</a>
           <a href="#schedule" className="nav-link" data-text="Schedule">Schedule</a>
           <a href="#sponsors" className="nav-link" data-text="Sponsors">Sponsors</a>
