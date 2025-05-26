@@ -12,6 +12,7 @@ function Navbar() {
         <div className="nav-links">
           <a href="#about" className="nav-link" data-text="About">About</a>
           <a href="#schedule" className="nav-link" data-text="Schedule">Schedule</a>
+          <a href="#ticket" className="nav-link" data-text="Ticket">Ticket</a>
           <a href="#sponsors" className="nav-link" data-text="Sponsors">Sponsors</a>
           <a 
             href="https://kide.app/events/9dabd7c4-135e-477c-a29c-9edb146a7a7e" 

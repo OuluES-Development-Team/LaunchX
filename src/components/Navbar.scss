@@ -15,11 +15,14 @@
     flex-direction: column; 
     padding: 0.5rem;
 
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
     @media (min-width: 768px) {
       flex-direction: row;
-      align-items: stretch;
-      padding: 0.5rem 0;
-
+      align-items: center;
     }
   }
 
@@ -35,8 +38,12 @@
       width: auto;
     }
 
-    @media (min-width: 768px) {
-        height: 100px;
+    @media (max-width: 480px) {
+        height: 50px;
+      }
+      
+      @media (min-width: 768px) {
+        height: 80px;
       }
 
   }
@@ -46,6 +53,9 @@
     gap: 1.5rem;
     margin-right: 1rem;
     align-items: center;
+    @media (max-width: 580px) {
+      gap: 0.5rem;
+    }
     a {
         position: relative;
       @include font-settings($text-light, 1rem);
@@ -54,6 +64,10 @@
       &:hover {
         color: $hover-color;
       }
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+      }
+      
     }
     #register-button {
     background-color: $shadow1; // Use a color that stands out

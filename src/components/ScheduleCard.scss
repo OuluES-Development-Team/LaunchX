@@ -16,8 +16,16 @@
   }
 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
+  
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
 
   .left-badge {
     display: flex;
@@ -57,11 +65,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
   
       .location-icon {
         margin-right: 0.4rem;
         color: $text-light;
         font-size: 1rem;
+
+        @media (max-width: 480px) {
+          margin-right: 0;
+        }
+
       }
     }
   }
@@ -77,16 +95,29 @@
         @include font-settings($shadow1, 1.5rem, bold);
         color: transparent;
         position: relative;
+
+        @media (max-width: 480px) {
+          font-size: 1.25rem;
+        }
+
       }
       .instructor {
         @include font-settings($text-blue, 1rem);
         margin-bottom: 0.5rem;
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+        }
       }
       .description {
         @include font-settings($text-light, 1.1rem);
         color: transparent;
         @include outline-text($text-light);
         margin-bottom: 1rem;
+
+        @media (max-width: 480px) {
+          font-size: 0.95rem;
+        }
       }
       
       .deliverables {

@@ -3,7 +3,7 @@ import "./Ticket.scss";
 
 const Ticket = () => {
   return (
-    <div className="ticket-container">
+    <div className="ticket-container" id="ticket">
       <h1 data-text="Get Ticket Now!">Get Ticket Now!</h1>
       <div className="ticket-card">
         <div className="ticket-title">VISITOR</div>
