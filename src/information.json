@@ -44,12 +44,12 @@
   "mentors": [
     {
       "name": "Jan Schmidt",
-      "description": "Startup Express Community Manager / CEO of Socfri Oy",
+      "description": "Startup Express Community Manager\nCEO of Socfri Oy",
       "expertise": ["Business Strategy", "Growth Hacking", "Fundraising"]
     },
     {
       "name": "Jason Browser",
-      "description": "A software developer and innovator & CTO at Alvidiotech & Kimberlite",
+      "description": "A software developer\nInnovator\nCTO at Alvidiotech & Kimberlite",
       "expertise": [
         "Software Development",
         "Cloud Computing",
@@ -58,7 +58,7 @@
     },
     {
       "name": "Jarmo Lumpus",
-      "description": "Co-founder of Lyhytvuokraus.fi / Advisor in various Startups",
+      "description": "Co-founder of Lyhytvuokraus.fi\nAdvisor in various Startups",
       "expertise": [
         "Digital Marketing",
         "Customer Acquisition",

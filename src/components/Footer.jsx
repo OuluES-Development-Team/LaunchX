@@ -18,6 +18,8 @@ function Footer() {
               <h3 className="footer-heading" data-text="Contact">Contact</h3>
               <ul className="footer-nav">
                 <li data-text="launchx@oulues.com">launchx@oulues.com</li>
+                <li data-text="+358 44 246 4519">+358 44 246 4519</li>
+                <li data-text="Oulu, Finland">Oulu, Finland</li>
               </ul>
             </div>
           </div>
