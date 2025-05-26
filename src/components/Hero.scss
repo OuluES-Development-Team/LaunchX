@@ -8,7 +8,14 @@ $duration: 5s;
   @include font-settings($text-light, 10rem, );
   font-family: $font-family-geist;
   color: transparent;
-  word-spacing: -0.5rem;
+  font-size: 4rem;
+  padding: 0 1rem;
+  word-spacing: normal; 
+
+  @media (min-width: 768px) {
+    font-size: 10rem; 
+    word-spacing: -0.5rem;
+  }
 
   // 3D Outline Layer (Pseudo-element) with lighter, skinnier offsets
   &::before {
@@ -51,37 +58,73 @@ $duration: 5s;
   }
 }
 
+.sub1-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
 .sub1 {
   position: relative;
-  @include font-settings($text-light, 2rem, bold);
+  display: block;
+  @include font-settings($text-light, 1.25rem, bold);
   font-family: $font-family-geist;
   color: transparent;
+  font-size: 1.1rem;
+  padding: 0 0.5rem;
+  margin: 0;
+  line-height: 1.3;
+  white-space: normal;
+  text-align: center;
+  width: 100%;
+  max-width: 95vw;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    white-space: pre-line;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
 
   &::before {
     content: attr(data-text);
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 0;
-    width: 100%;
-    height: 100%;
     color: transparent;
     text-shadow:
       -1px -1px 0 $text-shadow1,
        1px -1px 0  $text-shadow1,
       -2.5px  1px 0  $text-shadow1, 
        1px  1px 0  $text-shadow1;
-  
   }
 
   &::after {
     content: attr(data-text);
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 1;
-    width: 100%;
-    height: 100%;
     color: $text-light;
+  }
+}
+.sub1-mobile {
+  display: block;
+}
+.sub1-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sub1-mobile {
+    display: none;
+  }
+  .sub1-desktop {
+    display: block;
   }
 }

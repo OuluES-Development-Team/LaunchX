@@ -6,6 +6,7 @@
   flex-direction: column;
   padding: 3rem 0;
   background-color: black;
+  padding: 2rem 1rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -27,6 +28,12 @@
       font-family: $font-family-geist;
       color: transparent;
       position: relative;
+      font-size: 2rem; 
+      margin-bottom: 1rem;
+
+      @media (min-width: 768px) {
+        font-size: 3rem; 
+      }
 
       &::before {
         content: attr(data-text);
@@ -61,6 +68,12 @@
       font-family: $font-family-geist;
       position: relative;
       @include outline-text($text-blue, $text-shadow1, 1.5rem); 
+      font-size: 1.25rem; 
+      margin-bottom: 1rem;
+
+      @media (min-width: 768px) {
+        font-size: 1.5rem; // Original size for desktop
+      }
 }
     .event-subtext{
       @include font-settings($text-light);
@@ -68,6 +81,12 @@
       position: relative;
       color: transparent;
       @include outline-text($text-light);
+      font-size: 1rem; // Smaller font for mobile
+      line-height: 1.5;
+
+      @media (min-width: 768px) {
+        font-size: 1.1rem; // Original size for desktop
+      }
     }
   }
 
