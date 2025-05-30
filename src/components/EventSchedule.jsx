@@ -5,7 +5,7 @@ import './EventSchedule.scss';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // install react-icons if not yet
 
 function EventSchedule() {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleSchedule = () => {
     setIsExpanded(!isExpanded);
