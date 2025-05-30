@@ -29,7 +29,7 @@ const Ticket = () => {
         {/* Second Ticket */}
         <div className="ticket-card participant">
           <div className="ticket-title">PARTICIPANT</div>
-          <div className="ticket-price">FREE</div>
+          <div className="ticket-price">Free</div>
           <ul className="ticket-features">
             <li>All VISITOR benefits</li>
             <li>Priority seating at events</li>

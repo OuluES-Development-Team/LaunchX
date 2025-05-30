@@ -16,16 +16,9 @@
   }
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row; // Always row layout for all screen sizes
   align-items: center;
   gap: 1rem;
-  
-  @media (min-width: 640px) {
-    flex-direction: row;
-    align-items: center;
-    padding: 1.5rem;
-    gap: 1.25rem;
-  }
 
   .left-badge {
     display: flex;
@@ -39,47 +32,60 @@
     color: black;
     font-weight: bold;
     font-size: 1rem;
-    // box-shadow: 0 0 10px $shadow1;
     min-width: 64px;
-    max-width: 150px;
+    max-width: 200px;
     text-align: center;
+    width: 30%;
+
+    @media (max-width: 767px) {
+      font-size: 0.5rem;
+      width: 35%;
+    }
 
     .time {
       font-size: 1rem;
       line-height: 1.2;
-      word-wrap: break-word; // Ensure long text wraps
+      word-wrap: break-word;
+
+      @media (max-width: 767px) {
+        font-size: 0.55rem;
+      }
     }
-  
+
     .date {
       font-size: 0.875rem;
       line-height: 1.1;
-      word-wrap: break-word; // Ensure long text wraps
+      word-wrap: break-word;
+
+      @media (max-width: 767px) {
+        font-size: 0.55rem;
+      }
     }
-  
+
     .location {
       font-size: 0.875rem;
       line-height: 1.1;
       margin-top: 0.5rem;
       color: $text-light;
-      // word-wrap: break-word;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      @media (max-width: 480px) {
+      @media (max-width: 767px) {
+        font-size: 0.55rem;
         flex-direction: column;
         gap: 0.2rem;
       }
-  
+
       .location-icon {
         margin-right: 0.4rem;
         color: $text-light;
         font-size: 1rem;
 
-        @media (max-width: 480px) {
+        @media (max-width: 767px) {
           margin-right: 0;
+          font-size: 0.5rem;
         }
-
       }
     }
   }
@@ -96,49 +102,57 @@
         color: transparent;
         position: relative;
 
-        @media (max-width: 480px) {
-          font-size: 1.25rem;
+        @media (max-width: 767px) {
+          font-size: 1rem;
         }
-
       }
+
       .instructor {
         @include font-settings($text-blue, 1rem);
         margin-bottom: 0.5rem;
 
-        @media (max-width: 480px) {
+        @media (max-width: 767px) {
           font-size: 0.9rem;
         }
       }
+
       .description {
         @include font-settings($text-light, 1.1rem);
         color: transparent;
         @include outline-text($text-light);
         margin-bottom: 1rem;
 
-        @media (max-width: 480px) {
-          font-size: 0.95rem;
+        @media (max-width: 767px) {
+          font-size: 0.75rem;
         }
       }
-      
+
       .deliverables {
         margin-top: 1rem;
         padding: 0.75rem 1rem;
         background-color: rgba(111, 111, 255, 0.1);
         border-left: 3px solid $shadow1;
         border-radius: 0.5rem;
-        
+
         h4 {
           @include font-settings($text-blue, 1.2rem, bold);
-    
-          @include outline-text($text-blue, $text-shadow1, 1.2rem);
+          // @include outline-text($text-blue, $text-shadow1, 1.2rem);
           margin-bottom: 0.5rem;
+
+          @media (max-width: 767px) {
+            font-size: 0.8rem;
+          }
         }
-        
+
         p {
-          @include font-settings($text-light, 1rem);
+          @include font-settings($text-light, 1rem, bold);
           color: transparent;
-          @include outline-text($text-light);
+          // @include outline-text($text-light);
           margin-bottom: 0;
+
+          @media (max-width: 767px) {
+            font-size: 0.55rem;
+          }
         }
       }
 

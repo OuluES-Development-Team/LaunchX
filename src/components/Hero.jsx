@@ -3,7 +3,7 @@ import "./Hero.scss";
 
 function Hero() {
   return (
-    <div className="bg-black py-16 text-center">
+    <div className="bg-black  text-center">
       <h1 className="head" data-text="LaunchX">LaunchX</h1>
       <div className="sub1-wrapper">
         {/* Mobile: two lines */}
