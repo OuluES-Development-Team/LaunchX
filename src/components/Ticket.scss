@@ -1,151 +1,191 @@
 @import './styles/variables';
 @import './styles/mixins';
+
 .ticket-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  font-family: 'Geist', sans-serif;
+
+  @media (min-width: 768px) {
+    padding: 4rem 1rem;
+  }
+
+  h1 {
+    @include font-settings($text-light, 2.25rem, bold);
+    position: relative;
+    z-index: 3;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    @media (min-width: 768px) {
+      @include font-settings($text-light, 3rem, bold);
+    }
+
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      color: transparent;
+      text-shadow:
+        -1px -1px 0 $text-shadow1,
+         1px -1px 0 $text-shadow1,
+        -3.5px 1px 0 $text-shadow1,
+         1px 1px 0 $text-shadow1;
+    }
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      color: $text-light;
+    }
+  }
+
+  .tickets-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 3rem 1rem;
-    font-family: 'Geist', sans-serif;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
 
     @media (min-width: 768px) {
-    padding: 4rem 1rem; // Original padding on desktop
+      flex-direction: row;
+      justify-content: center;
+      gap: 3rem;
+    }
   }
-  
-    h1 {
-      @include font-settings($text-light, 3rem, bold);
-      position: relative;
-      z-index: 3;
-      margin-bottom: 2rem;
-  
-      &::before {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        color: transparent;
-        text-shadow:
-          -1px -1px 0 $text-shadow1,
-           1px -1px 0 $text-shadow1,
-          -3.5px 1px 0 $text-shadow1,
-           1px 1px 0 $text-shadow1,
 
-      }
-  
-      &::after {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-        color: $text-light;
+  .ticket-card {
+    position: relative;
+    width: 100%;
+    max-width: 22rem;
+    background: linear-gradient(to bottom, #7f00ff 80%, #ffffff 100%);
+    color: white;
+    border-radius: 2rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; // Center on mobile
+
+    @media (min-width: 768px) {
+      width: 22rem;
+      padding: 2.5rem 2rem;
+      margin: 0; // Remove auto margin on desktop
+    }
+
+    // Premium ticket styling
+    &.participant {
+      background: linear-gradient(to bottom, #ff6b35 80%, #ffffff 100%);      
+      @media (max-width: 767px) {
+        transform: none; // No scaling on mobile
       }
     }
-  
-    .ticket-card {
-      position: relative;
-      width: 90%; // Use percentage for mobile
-      max-width: 22rem; // Keep maximum width for larger screens
-      background: linear-gradient(to bottom, #7f00ff 80%, #ffffff 100%);
-      color: white;
-      border-radius: 2rem;
-      padding: 2rem 1.5rem; // Less padding on mobile
-      text-align: center;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      left: 0;
+      background-image: radial-gradient(circle at 10px 10px, black 10px, transparent 11px);
+      background-size: 20px 20px;
+      background-repeat: repeat-x;
+      z-index: 1;
+    }
+
+    &::before {
+      top: 0;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: translateY(50%);
+    }
+
+    .ticket-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      
       @media (min-width: 768px) {
-      width: 22rem; // Original width on desktop
-      padding: 2.5rem 2rem; // Original padding on desktop
-    }
-  
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 20px;
-        left: 0;
-        background-image: radial-gradient(circle at 10px 10px, black 10px, transparent 11px);
-        background-size: 20px 20px;
-        background-repeat: repeat-x;
-        z-index: 1;
-      }
-  
-      &::before {
-        top: 0;
-        transform: translateY(-50%);
-      }
-  
-      &::after {
-        bottom: 0;
-        transform: translateY(50%);
-      }
-  
-      .ribbon {
-        position: absolute;
-        top: 1.2rem;
-        right: -4rem;
-        background: white;
-        color: black;
-        font-weight: bold;
-        padding: 0.25rem 3rem;
-        transform: rotate(45deg);
-        font-size: 0.75rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        z-index: 2;
-      }
-  
-      .ticket-title {
         font-size: 2rem;
-        font-weight: bold;
         margin-bottom: 1.25rem;
       }
-  
-      .ticket-price {
-        background-color: white;
-        color: black;
-        font-weight: bold;
+    }
+
+    .ticket-price {
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      font-size: 1.5rem;
+      border-radius: 0.75rem;
+      width: 100%;
+      margin-bottom: 2rem;
+      display: inline-block;
+      outline: black solid 3px;
+      
+      @media (min-width: 768px) {
         font-size: 1.75rem;
-        border-radius: 0.75rem;
-        width: 100%;
         margin-bottom: 2.5rem;
-        display: inline-block;
-        outline: black solid 3px;
       }
-  
-      .ticket-features {
-        text-align: left;
+    }
+
+    .ticket-features {
+      text-align: left;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      padding-left: 0.75rem;
+      margin-bottom: 2.5rem;
+      
+      @media (min-width: 768px) {
         font-size: 1rem;
         line-height: 1.75;
         padding-left: 1rem;
         margin-bottom: 3rem;
-  
-        li {
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        
+        @media (min-width: 768px) {
           margin-bottom: 0.75rem;
         }
       }
-  
-      .buy-button {
-        background-color: black;
-        color: white;
-        font-weight: bold;
+    }
+
+    .buy-button {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      
+      @media (min-width: 768px) {
         font-size: 1.1rem;
         padding: 0.9rem 1.75rem;
-        border-radius: 2rem;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-        transition: background-color 0.3s;
-  
-        &:hover {
-          background-color: #222;
-        }
+      }
+
+      &:hover {
+        background-color: #222;
       }
     }
   }
-  
+}
