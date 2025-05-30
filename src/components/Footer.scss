@@ -136,7 +136,12 @@
 .social-icons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
+
+  @media screen and (min-width: 480px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .social-icon {

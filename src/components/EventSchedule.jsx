@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ScheduleCard from './ScheduleCard';
 import information from '../information.json';
 import './EventSchedule.scss';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // install react-icons if not yet
 
 function EventSchedule() {
-  const scheduleItems = Array.isArray(information.workshops) 
+  const [isExpanded, setIsExpanded] = useState(true);
+
+  const toggleSchedule = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const scheduleItems = Array.isArray(information.workshops)
     ? [...information.workshops].sort((a, b) => {
         const dateA = a.dates?.[0]?.date || '';
         const dateB = b.dates?.[0]?.date || '';
@@ -31,31 +38,38 @@ function EventSchedule() {
     <div className="event-schedule" id="schedule">
       <h2 data-text="Event Schedule">Event Schedule</h2>
 
-      <div className="schedule-list expanded">
-        {scheduleItems.map((item, index) => {
-          const dates = item.dates || []; 
-          const formattedDates = dates.map(({ date, day }) =>
-            date ? (day ? `${day}, ${formatDate(date)}` : formatDate(date)) : ''
-          );
-          const times = dates.map(({ startTime, endTime }) =>
-            startTime && endTime ? `${startTime} - ${endTime}` : startTime || ''
-          );
-          const locations = dates.map(({ location }) => location || '');
+      <button className="toggle-button" onClick={toggleSchedule}>
+        {isExpanded ? 'Hide Schedule' : 'Show Schedule'}
+        {isExpanded ? <FaChevronUp className="arrow-icon" /> : <FaChevronDown className="arrow-icon" />}
+      </button>
 
-          return (
-            <div className="schedule-card" key={index}>
-              <ScheduleCard
-                title={item.title}
-                date={formattedDates}
-                time={times}
-                location={locations}
-                description={item.description}
-                instructor={item.instructor}
-              />
-            </div>
-          );
-        })}
-      </div>
+      {isExpanded && (
+        <div className="schedule-list expanded">
+          {scheduleItems.map((item, index) => {
+            const dates = item.dates || [];
+            const formattedDates = dates.map(({ date, day }) =>
+              date ? (day ? `${day}, ${formatDate(date)}` : formatDate(date)) : ''
+            );
+            const times = dates.map(({ startTime, endTime }) =>
+              startTime && endTime ? `${startTime} - ${endTime}` : startTime || ''
+            );
+            const locations = dates.map(({ location }) => location || '');
+
+            return (
+              <div className="schedule-card" key={index}>
+                <ScheduleCard
+                  title={item.title}
+                  date={formattedDates}
+                  time={times}
+                  location={locations}
+                  description={item.description}
+                  instructor={item.instructor}
+                />
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
