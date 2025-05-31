@@ -10,7 +10,8 @@ import './Mentor.scss';
 const speakerImages = {
   "Jan Schmidt": "https://res.cloudinary.com/daf9up52k/image/upload/v1747733061/janSchmidt_lpfhcz.jpg",
   "Jason Browser": "https://res.cloudinary.com/daf9up52k/image/upload/v1747748220/JasonBrowser_hj5rh9.jpg",
-  "Jarmo Lumpus": "https://res.cloudinary.com/daf9up52k/image/upload/v1747733062/jarmoLumpus_fzxibn.jpg"
+  "Jarmo Lumpus": "https://res.cloudinary.com/daf9up52k/image/upload/v1747733062/jarmoLumpus_fzxibn.jpg",
+  "Pettu Nuottajärvi": "https://res.cloudinary.com/daf9up52k/image/upload/v1748697055/WhatsApp_Image_2025-05-30_at_23.54.23_egrel6.jpg"
 };
 
 const defaultSpeaker = "https://res.cloudinary.com/daf9up52k/image/upload/v1747733388/Avatar_yh6dlr.jpg";

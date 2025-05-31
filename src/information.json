@@ -64,6 +64,15 @@
         "Customer Acquisition",
         "Brand Strategy"
       ]
+    },
+    {
+      "name": "Pettu Nuottajärvi",
+      "description": "Co-founder of Buutti\nPassionate programmer and software developer",
+      "expertise": [
+        "Business Development",
+        "Market Research",
+        "Sales Strategy"
+      ]
     }
   ],
   "programInfo": {
