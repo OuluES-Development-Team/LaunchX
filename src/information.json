@@ -37,7 +37,7 @@
     },
     {
       "name": "Startup Oulu",
-      "image": "https://res.cloudinary.com/daf9up52k/image/upload/v1748638403/startupoulu_logo_pysty_mv_1_ptahin.png",
+      "image": "https://res.cloudinary.com/daf9up52k/image/upload/e_background_removal/f_png/v1748697860/startupoulu_logo_pysty_mv_1-removebg-preview_1_eurt3c.png",
       "link": "https://www.startupoulu.com/"
     }
   ],
@@ -68,11 +68,7 @@
     {
       "name": "Pettu Nuottajärvi",
       "description": "Co-founder of Buutti\nPassionate programmer and software developer",
-      "expertise": [
-        "Business Development",
-        "Market Research",
-        "Sales Strategy"
-      ]
+      "expertise": ["Business Development", "Market Research", "Sales Strategy"]
     }
   ],
   "programInfo": {
